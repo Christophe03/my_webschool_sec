@@ -200,6 +200,8 @@ class SignInProvider extends ChangeNotifier {
 
   Future signInwithEmailPassword(userEmail, userPassword) async {
     try {
+      print("$userEmail  $userPassword");
+
       await _firebaseAuth.signInWithEmailAndPassword(
           email: userEmail, password: userPassword);
 
@@ -216,6 +218,25 @@ class SignInProvider extends ChangeNotifier {
       }
       notifyListeners();
     }
+  }
+
+  Future loginWithEmailAndPassword(String email, String password) async {
+    try {
+      print("Start");
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: "toumanychristophediarra@gmail.com", password: "0123456");
+      print("End");
+    } catch (e) {
+      print("impossible de ce connecter :> $e");
+    }
+    // on FirebaseAuthException catch (e) {
+    //   print("impossible de ce connecter :> $e");
+    //   if (e.code == 'user-not-found') {
+    //     print('No user found for that email.');
+    //   } else if (e.code == 'wrong-password') {
+    //     print('Wrong password provided for that user.');
+    //   }
+    // }
   }
 
   Future resetPassword(String email) async {

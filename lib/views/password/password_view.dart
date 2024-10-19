@@ -4,16 +4,12 @@ import 'dart:io';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:my_webschool_sec/utils/snacbar.dart';
 
-import '../../providers/sign_in_provider.dart';
 import '../../routes/routes.dart';
 import '../../utils/constants_util.dart';
 import '../../utils/dialog.dart';
-import '../../widgets/text_form_field.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class PasswordView extends StatefulWidget {

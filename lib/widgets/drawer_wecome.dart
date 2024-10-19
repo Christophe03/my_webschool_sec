@@ -6,9 +6,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:url_launcher/url_launcher.dart';
 import 'package:my_webschool_sec/models/student_model.dart';
 
-import '../config/config.dart';
 import '../utils/constants_util.dart';
-import '../utils/launch_url_util.dart';
 
 class DrawerWidget extends StatelessWidget {
   DrawerWidget({
