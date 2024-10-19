@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hive/hive.dart';
 import 'package:provider/provider.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
@@ -15,7 +16,6 @@ import '../../utils/constants_util.dart';
 import '../../widgets/labeled_text_form_field.dart';
 import '../../widgets/wave_header.dart';
 import 'widgets/email_login.dart';
-import 'widgets/social_login_widget.dart';
 
 class LoginView extends StatefulWidget {
   final String? tag;
@@ -111,7 +111,7 @@ class _LoginViewState extends State<LoginView> {
           showProgress = true;
         });
 
-        sb.signInwithEmailPassword(email, pass).then((uid) async {
+        sb.loginWithEmailAndPassword(email!, pass!).then((uid) async {
           if (sb.hasError == false) {
             final userHive = Hive.box(hivedb);
             userHive.put('uid', uid);
@@ -204,22 +204,33 @@ class _LoginViewState extends State<LoginView> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                LabeledTextFormField(
-                                                  title: 'email'.tr(),
+                                                TextFormField(
+                                                  decoration: InputDecoration(
+                                                      labelText: 'email'.tr(),
+                                                      hintText:
+                                                          'votre.email'.tr(),
+                                                      border:
+                                                          OutlineInputBorder()),
                                                   controller: _emailController,
                                                   keyboardType: TextInputType
                                                       .emailAddress,
-                                                  hintText: 'votre.email'.tr(),
                                                   validator: (value) => value!
                                                           .isEmpty
                                                       ? "error.email.required"
                                                           .tr()
                                                       : null,
                                                   onChanged: (value) =>
-                                                      email = value!.trim(),
+                                                      email = value.trim(),
                                                 ),
-                                                LabeledTextFormField(
-                                                  title: 'password'.tr(),
+                                                const Gap(10),
+                                                TextFormField(
+                                                  decoration: InputDecoration(
+                                                    labelText: 'password'.tr(),
+                                                    // hintText: 'votre.password'.tr(),
+                                                    border:
+                                                        OutlineInputBorder(),
+                                                    hintText: '* * * * * *',
+                                                  ),
                                                   controller:
                                                       _passwordController,
                                                   obscureText: true,
@@ -229,9 +240,7 @@ class _LoginViewState extends State<LoginView> {
                                                           .tr()
                                                       : null,
                                                   onChanged: (value) =>
-                                                      pass = value!,
-                                                  hintText: '* * * * * *',
-                                                  padding: 0,
+                                                      pass = value,
                                                 ),
                                                 Row(
                                                   children: [

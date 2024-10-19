@@ -3,7 +3,6 @@ import 'package:hive/hive.dart';
 import 'package:provider/provider.dart';
 import 'package:my_webschool_sec/providers/news_provider.dart';
 import 'package:my_webschool_sec/utils/constants_util.dart';
-import 'package:my_webschool_sec/views/login/login_view.dart';
 import 'package:my_webschool_sec/views/welcome/widgets/all_news.dart';
 import 'package:my_webschool_sec/views/welcome/widgets/all_timesheet.dart';
 import 'package:my_webschool_sec/widgets/drawer_wecome.dart';

@@ -1,4 +1,3 @@
-import 'package:animations/animations.dart';
 import 'package:fluid_dialog/fluid_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:my_webschool_sec/models/news_model.dart';

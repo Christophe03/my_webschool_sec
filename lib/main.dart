@@ -1,6 +1,7 @@
 import 'dart:io';
-
 import 'package:easy_localization/easy_localization.dart';
+import 'package:easy_localization_loader/easy_localization_loader.dart';
+import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,11 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseAppCheck.instance.activate(
+    webProvider: ReCaptchaV3Provider('recaptcha-v3-site-key'),
+    androidProvider: AndroidProvider.debug,
+    appleProvider: AppleProvider.appAttest,
+  );
   FirebaseMessaging.onBackgroundMessage(_messageHandler);
   Directory directory = await getApplicationDocumentsDirectory();
   Hive.init(directory.path);
@@ -36,6 +42,7 @@ void main() async {
     path: 'assets/translations',
     fallbackLocale: const Locale('fr'),
     startLocale: const Locale('fr'),
+    assetLoader: const JsonAssetLoader(),
     useOnlyLangCode: true,
     child: const MyApp(),
   ));

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "551184465841",
+    "firebase_url": "https://conseilos-ab8ec-default-rtdb.firebaseio.com",
+    "project_id": "conseilos-ab8ec",
+    "storage_bucket": "conseilos-ab8ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551184465841:android:bd6b9812da18950ab64790",
+        "android_client_info": {
+          "package_name": "com.example.my_webschool_sec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551184465841-n4ug0m7a2g8vnv7gn3uhkbh3hke1m7jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALYL_1k9QFBuyhRuBWv0cajzOS7MJT2gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551184465841-n4ug0m7a2g8vnv7gn3uhkbh3hke1m7jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551184465841:android:e96be426c094178bb64790",
+        "android_client_info": {
+          "package_name": "com.example.mywebschoolsec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551184465841-n4ug0m7a2g8vnv7gn3uhkbh3hke1m7jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALYL_1k9QFBuyhRuBWv0cajzOS7MJT2gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551184465841-n4ug0m7a2g8vnv7gn3uhkbh3hke1m7jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

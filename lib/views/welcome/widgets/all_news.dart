@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:my_webschool_sec/models/news_model.dart';
 import 'package:my_webschool_sec/providers/news_provider.dart';
 import 'package:my_webschool_sec/utils/constants_util.dart';
-import 'package:my_webschool_sec/views/welcome/widgets/news.dart';
 import 'package:my_webschool_sec/views/welcome/widgets/news_card.dart';
 import 'package:my_webschool_sec/widgets/app_name.dart';
 import 'package:my_webschool_sec/widgets/loading_cards.dart';

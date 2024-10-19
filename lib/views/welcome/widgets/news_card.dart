@@ -1,13 +1,8 @@
-import 'package:animations/animations.dart';
-import 'package:fluid_dialog/fluid_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_webschool_sec/utils/string_util.dart';
-import 'package:my_webschool_sec/views/welcome/widgets/about.dart';
-
 import '../../../models/news_model.dart';
 import '../../../utils/constants_util.dart';
-
 import 'package:easy_localization/easy_localization.dart';
 import '../../../utils/screem_util.dart';
 
