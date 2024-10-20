@@ -1,4 +1,4 @@
-package com.example.my_webschool_sec
+package com.sitaninfo.MyWebschoolSec
 
 import io.flutter.embedding.android.FlutterActivity
 

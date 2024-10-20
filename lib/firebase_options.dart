@@ -41,53 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDAkpmLIoS4sRhRVQdmEAZTJbeUS-_ElY8',
-    appId: '1:551184465841:web:49a4d9811c106c9cb64790',
-    messagingSenderId: '551184465841',
-    projectId: 'conseilos-ab8ec',
-    authDomain: 'conseilos-ab8ec.firebaseapp.com',
-    databaseURL: 'https://conseilos-ab8ec-default-rtdb.firebaseio.com',
-    storageBucket: 'conseilos-ab8ec.appspot.com',
-    measurementId: 'G-L4NM2NC0SV',
+    apiKey: 'AIzaSyAG648KzkSgUjYiaodfzPSsVTwARfFj1_g',
+    appId: '1:1022120905950:web:c3455a77b7aede37b5464f',
+    messagingSenderId: '1022120905950',
+    projectId: 'ws-portail-sec-e18ab',
+    authDomain: 'ws-portail-sec-e18ab.firebaseapp.com',
+    storageBucket: 'ws-portail-sec-e18ab.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyALYL_1k9QFBuyhRuBWv0cajzOS7MJT2gs',
-    appId: '1:551184465841:android:bd6b9812da18950ab64790',
-    messagingSenderId: '551184465841',
-    projectId: 'conseilos-ab8ec',
-    databaseURL: 'https://conseilos-ab8ec-default-rtdb.firebaseio.com',
-    storageBucket: 'conseilos-ab8ec.appspot.com',
+    apiKey: 'AIzaSyBgqY-xN70lUNIBX9rfE6zD4HFg_BPwyLY',
+    appId: '1:1022120905950:android:cb5ca72306c3c1c8b5464f',
+    messagingSenderId: '1022120905950',
+    projectId: 'ws-portail-sec-e18ab',
+    storageBucket: 'ws-portail-sec-e18ab.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDz6OINGiKBhB-RVWIzWFWs_2nzn2QADKI',
-    appId: '1:551184465841:ios:e7d8b1b338376f2cb64790',
-    messagingSenderId: '551184465841',
-    projectId: 'conseilos-ab8ec',
-    databaseURL: 'https://conseilos-ab8ec-default-rtdb.firebaseio.com',
-    storageBucket: 'conseilos-ab8ec.appspot.com',
+    apiKey: 'AIzaSyAsn_GF0do2i8bXpILNK02Fsww_qfe2dVQ',
+    appId: '1:1022120905950:ios:452eb1d098c4882fb5464f',
+    messagingSenderId: '1022120905950',
+    projectId: 'ws-portail-sec-e18ab',
+    storageBucket: 'ws-portail-sec-e18ab.appspot.com',
     iosBundleId: 'com.example.myWebschoolSec',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDz6OINGiKBhB-RVWIzWFWs_2nzn2QADKI',
-    appId: '1:551184465841:ios:e7d8b1b338376f2cb64790',
-    messagingSenderId: '551184465841',
-    projectId: 'conseilos-ab8ec',
-    databaseURL: 'https://conseilos-ab8ec-default-rtdb.firebaseio.com',
-    storageBucket: 'conseilos-ab8ec.appspot.com',
+    apiKey: 'AIzaSyAsn_GF0do2i8bXpILNK02Fsww_qfe2dVQ',
+    appId: '1:1022120905950:ios:452eb1d098c4882fb5464f',
+    messagingSenderId: '1022120905950',
+    projectId: 'ws-portail-sec-e18ab',
+    storageBucket: 'ws-portail-sec-e18ab.appspot.com',
     iosBundleId: 'com.example.myWebschoolSec',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDAkpmLIoS4sRhRVQdmEAZTJbeUS-_ElY8',
-    appId: '1:551184465841:web:49a4d9811c106c9cb64790',
-    messagingSenderId: '551184465841',
-    projectId: 'conseilos-ab8ec',
-    authDomain: 'conseilos-ab8ec.firebaseapp.com',
-    databaseURL: 'https://conseilos-ab8ec-default-rtdb.firebaseio.com',
-    storageBucket: 'conseilos-ab8ec.appspot.com',
-    measurementId: 'G-L4NM2NC0SV',
+    apiKey: 'AIzaSyAG648KzkSgUjYiaodfzPSsVTwARfFj1_g',
+    appId: '1:1022120905950:web:c3455a77b7aede37b5464f',
+    messagingSenderId: '1022120905950',
+    projectId: 'ws-portail-sec-e18ab',
+    authDomain: 'ws-portail-sec-e18ab.firebaseapp.com',
+    storageBucket: 'ws-portail-sec-e18ab.appspot.com',
   );
 }

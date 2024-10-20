@@ -40,7 +40,7 @@ class _FinanceViewState extends State<FinanceView> {
 
     if (user != null) {
       await FirebaseFirestore.instance
-          .collection("students_" + userHive.get('sid'))
+          .collection("parents_galaxie")
           .doc(userHive.get('uid'))
           .get()
           .then((value) async {

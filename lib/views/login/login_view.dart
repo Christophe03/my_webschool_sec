@@ -13,7 +13,6 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 import '../../providers/sign_in_provider.dart';
 import '../../routes/routes.dart';
 import '../../utils/constants_util.dart';
-import '../../widgets/labeled_text_form_field.dart';
 import '../../widgets/wave_header.dart';
 import 'widgets/email_login.dart';
 
@@ -40,7 +39,7 @@ class _LoginViewState extends State<LoginView> {
   bool signInComplete = false;
 
   String? email;
-  String? pass;
+  String? password;
 
   handleGoogleSignIn() async {
     // final SignInBloc sb = Provider.of<SignInBloc>(context, listen: false);
@@ -111,7 +110,7 @@ class _LoginViewState extends State<LoginView> {
           showProgress = true;
         });
 
-        sb.loginWithEmailAndPassword(email!, pass!).then((uid) async {
+        sb.loginUserAuth(email!, password!).then((uid) async {
           if (sb.hasError == false) {
             final userHive = Hive.box(hivedb);
             userHive.put('uid', uid);
@@ -240,7 +239,7 @@ class _LoginViewState extends State<LoginView> {
                                                           .tr()
                                                       : null,
                                                   onChanged: (value) =>
-                                                      pass = value,
+                                                      password = value,
                                                 ),
                                                 Row(
                                                   children: [

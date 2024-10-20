@@ -220,23 +220,47 @@ class SignInProvider extends ChangeNotifier {
     }
   }
 
+  Future loginUserAuth(String userEmail, String userPassword) async {
+    try {
+      await _firebaseAuth.signInWithEmailAndPassword(
+          email: userEmail, password: userPassword);
+
+      final User currentUser = _firebaseAuth.currentUser!;
+      signInProvider = 'email';
+      _hasError = false;
+      notifyListeners();
+      return currentUser.uid;
+    } catch (e) {
+      _hasError = true;
+      _errorMessage = e.toString();
+      if (kDebugMode) {
+        print('Caught error: $e');
+      }
+      notifyListeners();
+    }
+  }
+
   Future loginWithEmailAndPassword(String email, String password) async {
     try {
       print("Start");
       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: "toumanychristophediarra@gmail.com", password: "0123456");
-      print("End");
+        email: email, // Utiliser les paramètres de fonction
+        password: password,
+      );
+      print("User signed in successfully: ${credential.user?.email}");
+    } on FirebaseAuthException catch (e) {
+      // Gérer les exceptions spécifiques à FirebaseAuth
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      } else {
+        print("Firebase Auth Exception: ${e.code}");
+      }
     } catch (e) {
-      print("impossible de ce connecter :> $e");
+      // Gérer les autres types d'exceptions
+      print("An error occurred: $e");
     }
-    // on FirebaseAuthException catch (e) {
-    //   print("impossible de ce connecter :> $e");
-    //   if (e.code == 'user-not-found') {
-    //     print('No user found for that email.');
-    //   } else if (e.code == 'wrong-password') {
-    //     print('Wrong password provided for that user.');
-    //   }
-    // }
   }
 
   Future resetPassword(String email) async {
@@ -302,7 +326,7 @@ class SignInProvider extends ChangeNotifier {
     try {
       // print('ktag:uid=$uid');
       await FirebaseFirestore.instance
-          .collection("users")
+          .collection("users_galaxie")
           .doc(uid)
           .get()
           .then((value) async {
@@ -328,7 +352,7 @@ class SignInProvider extends ChangeNotifier {
         userHive.put('sadresse', value['adresse']);
       });
       await FirebaseFirestore.instance
-          .collection("students_" + userHive.get('sid'))
+          .collection("parents_galaxie")
           .doc(userHive.get('uid'))
           .get()
           .then((value) async {
