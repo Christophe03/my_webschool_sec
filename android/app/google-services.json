@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1022120905950",
+    "project_id": "ws-portail-sec-e18ab",
+    "storage_bucket": "ws-portail-sec-e18ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022120905950:android:cb5ca72306c3c1c8b5464f",
+        "android_client_info": {
+          "package_name": "com.example.MyWebschoolSec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgqY-xN70lUNIBX9rfE6zD4HFg_BPwyLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022120905950:android:50e89baeb7c432dbb5464f",
+        "android_client_info": {
+          "package_name": "com.sitaninfo.MyWebschoolSec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgqY-xN70lUNIBX9rfE6zD4HFg_BPwyLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
